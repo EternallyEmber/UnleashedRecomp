@@ -64,3 +64,6 @@
 [submodule "simde"]
 	path = simde
 	url = https://github.com/simd-everywhere/simde.git
+[submodule "thirdparty/simde"]
+	path = thirdparty/simde
+	url = https://github.com/simd-everywhere/simde
