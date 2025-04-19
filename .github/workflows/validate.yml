@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
+        arch: ["amd64","arm64"]
         preset: ["linux-debug", "linux-release", "linux-relwithdebinfo"]
     env:
       LLVM_VERSION: 18
