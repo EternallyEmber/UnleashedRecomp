@@ -1,6 +1,6 @@
 name: validate
 on:
-  workflow_call:
+  workflow_dispatch:
     secrets:
       ASSET_REPO:
         required: true
