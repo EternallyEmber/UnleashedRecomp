@@ -5,10 +5,15 @@ if(NOT DEFINED ENV{VCPKG_ROOT})
 endif()
 
 include($ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+include_directories(${CMAKE_SOURCE_DIR}/thirdparty/simde)
 set(UNLEASHED_RECOMP_THIRDPARTY_ROOT ${CMAKE_SOURCE_DIR}/thirdparty)
 set(UNLEASHED_RECOMP_TOOLS_ROOT ${CMAKE_SOURCE_DIR}/tools)
 set(CMAKE_CXX_STANDARD 20)
 set(BUILD_SHARED_LIBS OFF)
+
+add_compile_definitions(
+  SIMDE_ENABLE_NATIVE_ALIASES
+)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
@@ -19,9 +24,9 @@ endif()
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 # Target Sandy Bridge for all projects
-add_compile_options(
-    -march=sandybridge
-)
+## add_compile_options(
+##     -march=sandybridge
+## )
 
 add_subdirectory(${UNLEASHED_RECOMP_THIRDPARTY_ROOT})
 add_subdirectory(${UNLEASHED_RECOMP_TOOLS_ROOT})

@@ -61,9 +61,6 @@
 [submodule "UnleashedRecomp/api"]
 	path = UnleashedRecomp/api
 	url = https://github.com/hedge-dev/SWA.git
-[submodule "simde"]
-	path = simde
-	url = https://github.com/simd-everywhere/simde.git
 [submodule "thirdparty/simde"]
 	path = thirdparty/simde
 	url = https://github.com/simd-everywhere/simde
