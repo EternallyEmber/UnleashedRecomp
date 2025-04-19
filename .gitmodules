@@ -61,3 +61,6 @@
 [submodule "thirdparty/simde"]
 	path = thirdparty/simde
 	url = https://github.com/simd-everywhere/simde
+[submodule "tools/XenonRecomp"]
+	path = tools/XenonRecomp
+	url = https://github.com/EternallyEmber/XenonRecomp-simde.git
